@@ -1,0 +1,98 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <div class="content">
+    <h1 class="animate-h1">a <span>student</span> with a passion for web development, I'm training to become a ↬ <span>full-stack developer</span>.</h1>
+    <p class="header-p fade-in">Check my latest <span class="special-word">projects</span></p>
+    <section class="projects-slide">
+      <article class="projectindividual fade-in">
+        
+        <p >Bodyslim Centre<br><span class="light">2024</span></p>
+        <div class="icon-contianer">
+          <div class="icon-label web">webdev</div>
+          <div class="icon-label design">design</div>
+        </div>
+      </article>
+      <article class="projectindividual fade-in double">
+        <p>Magic The Gathering (School project)<br><span class="light">2024</span></p>
+        <div class="icon-contianer">
+          <div class="icon-label coding">full-stack</div>
+          <div class="icon-label web">webdev</div>
+          <div class="icon-label design">design</div>
+        </div>
+      </article>
+      <article class="projectindividual fade-in">
+        <p>Chandelle Botanique<br><span class="light">2024</span></p>
+        <div class="icon-contianer">
+          <div class="icon-label web">webdev</div>
+          <div class="icon-label design">design</div>
+        </div>
+      </article>
+      <article class="projectindividual fade-in double">
+        <p>MileStone (School project)<br><span class="light">2024</span></p> 
+        <div class="icon-contianer">
+          <div class="icon-label coding">full-stack</div>
+          <div class="icon-label web">webdev</div>
+          <div class="icon-label design">design</div>
+        </div>
+      </article>
+      <article class="projectindividual fade-in">
+        <p>FreezMix Maroc<br><span class="light">2024</span></p>
+        <div class="icon-contianer">
+          <div class="icon-label web">webdev</div>
+          <div class="icon-label design">design</div>
+        </div>
+      </article>
+      <article class="projectindividual fade-in explore">
+        <!-- <p>Bloom-Bar Brussels<br><span class="light">2023</span></p>
+        <div class="icon-contianer">
+          <div class="icon-label web">webdev</div>
+          <div class="icon-label design">design</div>
+        </div> -->
+        <a href="/projects" class="nav-item explore-text">Explore more <div class="arrow-1"></div></a>
+      </article>
+    </section>
+  </div>
+  <section class="about fade-in">
+    <h1>ABOUT</h1>
+    <p class="header-p"><span class="special-word">Hamza, 23-year-old</span> former design student <br>I am looking forward to new challenges and <br> opportunities that will allow me to combine <br> my design sensibility with my developing skills.</p>
+    <article class="full-screen-project"></article>
+  </section>
+</main>
+<%- include('partials/footer') %>
+<%- include('partials/foot') %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const h1 = document.querySelector('h1');
+    if (h1) {
+        let text = h1.textContent; // Utiliser textContent pour capturer le texte brut sans balises HTML
+        let words = text.split(' ');
+        let spanContent = '';
+        
+        words.forEach((word, wordIndex) => {
+            if (word) {
+                let wordSpan = '<span class="word">';
+                
+                // Vérifier si le mot est "student" ou "FULL-STACK DEVELOPER" pour ajouter la classe span
+                if (word.toLowerCase() === 'student' || word.toLowerCase() === 'full-stack') {
+                    for (let i = 0; i < word.length; i++) {
+                        let letter = word[i];
+                        wordSpan += `<span class="letter span special-word" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+                    }
+                } else {
+                    for (let i = 0; i < word.length; i++) {
+                        let letter = word[i];
+                        wordSpan += `<span class="letter" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+                    }
+                }
+                
+                wordSpan += '</span> '; // Ajouter un espace après chaque mot
+                spanContent += wordSpan;
+            }
+        });
+
+        h1.innerHTML = spanContent.trim(); // Mettre à jour le contenu de h1 avec le nouveau contenu
+    }
+});
+</script>

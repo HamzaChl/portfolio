@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background-color: #111111;
+  color: white;
+}
+
+.main-with-background {
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111111;
+  box-shadow: -1px 5px 10px 0px rgba(17, 17, 17, 0.75);
+  top: 0;
+  position: sticky;
+  z-index: 10;
+}
+
+header>nav {
+  display: flex;
+  gap: 40px;
+}
+
+.login-area {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 81px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+span {}
+
+.special-word {
+  background: -webkit-linear-gradient(#e1eec3, #f05053);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+p {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.header-p {
+  color: white;
+}
+
+.easter-egg {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+}
+
+.easter-egg::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.easter-egg:hover::after {
+  width: 100%;
+  background: -webkit-linear-gradient(#e1eec3, #f05053);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main,
+header,
+footer {
+  padding: 0 20px;
+}
+
+.projects-slide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.projectindividual {
+  background-color: #ffffff;
+  height: 20vw;
+  filter: brightness(70%);
+  transition: all 1s ease;
+  display: flex;
+  align-items: left;
+  padding: 40px;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.projectindividual.double {
+  grid-column: span 2;
+}
+
+.projectindividual:hover {
+  filter: brightness(100%);
+}
+
+.light {
+  background: rgb(190, 190, 190);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.6;
+}
+
+.ch-b {
+  background-image: url(../assets/test1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.full-screen-project {
+  height: 770px;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  margin-top: 67px;
+  margin-bottom: 67px;
+}
+
+footer {
+  height: 100px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+footer p {
+  text-align: left !important;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+  /* Prevent words from breaking */
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.icon-label {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  text-align: center;
+}
+
+.icon-label.design {
+  background-color: rgb(120, 176, 196);
+}
+
+.icon-label.web {
+  background-color: rgb(231, 119, 119);
+}
+
+.icon-label.coding {
+  background-color: rgb(130, 196, 120);
+}
+
+.icon-contianer {
+  display: flex;
+  gap: 10px;
+}
+
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-text {
+  color: black
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.arrow-1 {
+  width: 100px;
+  height: 30px;
+  display: flex;
+}
+
+.arrow-1:before {
+  content: "";
+  background: currentColor;
+  width: 15px;
+  clip-path: polygon(0 10px, calc(100% - 15px) 10px, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, calc(100% - 15px) calc(100% - 10px), 0 calc(100% - 10px));
+  animation: a1 1.5s infinite linear;
+}
+
+@keyframes a1 {
+
+  90%,
+  100% {
+    flex-grow: 1
+  }
+}

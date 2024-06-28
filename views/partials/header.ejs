@@ -1,9 +1,39 @@
 <header class="fade-in">
-    <p class="header-p">Hamza's Portfolio <span class="special-word"> designer/developper</p></span>
+    <p class="header-p">Hamza's <span class="special-word">Portfolio</span></p>
     <nav>
-        <a href="/" class="nav-item">Home</a>
-        <a href="/projects" class="nav-item">Projects</a>
-        <a href="" class="nav-item">Contact</a>
+      <a href="/" class="nav-item <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+      <a href="/projects" class="nav-item <%= currentPage === 'projects' ? 'active' : '' %>">Projects</a>
+      <a href="/contact" class="nav-item <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+      <i id="theme-icon" class="fa-solid fa-moon fa-xl" onclick="toggleDarkMode()"></i>
     </nav>
-    
-</header>
+  
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('light-mode');
+        const isLightMode = document.body.classList.contains('light-mode');
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        updateThemeIcon();
+      }
+  
+      function updateThemeIcon() {
+        const themeIcon = document.getElementById('theme-icon');
+        if (document.body.classList.contains('light-mode')) {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        } else {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        }
+      }
+  
+      // Initial update on page load
+      document.addEventListener('DOMContentLoaded', function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          document.body.classList.add('light-mode');
+        }
+        updateThemeIcon();
+      });
+    </script>
+  </header>
+  

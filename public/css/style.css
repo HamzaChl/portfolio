@@ -1,10 +1,45 @@
+:root {
+  --color-background: #181818;
+  --color-text: white;
+  --color-primary: #e1eec3;
+  --color-secondary: #f05053;
+  --color-accent: #e8e8e8;
+  --color-light-bg: rgb(190, 190, 190);
+  --color-light-text: black;
+  --color-design-bg: rgb(120, 176, 196);
+  --color-web-bg: rgb(231, 119, 119);
+  --color-coding-bg: rgb(130, 196, 120);
+  --color-project-bg: #ffffff;
+  --color-project-hover: brightness(70%);
+  --color-project-hover-active: brightness(100%);
+  --color-header-border: #ffffff;
+}
+
+.light-mode {
+  --color-background: #e8e8e8;
+  --color-text: #181818;
+  --color-primary: #f05053;
+  --color-secondary: #e1eec3;
+  --color-accent: #181818;
+  --color-light-bg: rgb(240, 240, 240);
+  --color-light-text: #333333;
+  --color-design-bg: rgb(120, 176, 196);
+  --color-web-bg: rgb(231, 119, 119);
+  --color-coding-bg: rgb(130, 196, 120);
+  --color-project-bg: #333333;
+  --color-project-hover: brightness(100%);
+  --color-project-hover-active: brightness(70%);
+  --color-header-border: #181818;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
-  background-color: #111111;
-  color: white;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .main-with-background {
@@ -22,6 +57,10 @@ body {
   z-index: -1;
 }
 
+.contact {
+  text-align: right;
+}
+
 .content {
   position: relative;
   z-index: 1;
@@ -31,16 +70,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #111111;
-  box-shadow: -1px 5px 10px 0px rgba(17, 17, 17, 0.75);
   top: 0;
-  position: sticky;
   z-index: 10;
 }
 
 header>nav {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .login-area {
@@ -52,7 +89,7 @@ header>nav {
 .nav-item {
   position: relative;
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
 }
 
 .nav-item::after {
@@ -62,12 +99,23 @@ header>nav {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background-color: white;
+  background-color: var(--color-text);
   transition: width 0.3s ease;
 }
 
 .nav-item:hover::after {
   width: 100%;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: width 0.3s ease;
 }
 
 h1 {
@@ -80,7 +128,7 @@ h1 {
 span {}
 
 .special-word {
-  background: -webkit-linear-gradient(#e1eec3, #f05053);
+  background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
@@ -89,11 +137,11 @@ span {}
 p {
   font-size: 17px;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--color-background);
 }
 
 .header-p {
-  color: white;
+  color: var(--color-text);
 }
 
 .header-p a {
@@ -103,7 +151,7 @@ p {
 .easter-egg {
   position: relative;
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
   overflow: hidden;
 }
 
@@ -120,7 +168,7 @@ p {
 
 .easter-egg:hover::after {
   width: 100%;
-  background: -webkit-linear-gradient(#e1eec3, #f05053);
+  background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -152,19 +200,18 @@ footer {
 
 .head-text-special {
   font-size: bold;
-  -webkit-text-stroke: 1px #ffffff;
-  color: transparent
-    /* -webkit-text-stroke-color: #ffffff; */
+  -webkit-text-stroke: 1px var(--color-accent);
+  color: transparent;
 }
 
 .projectindividual {
-  background-color: #ffffff;
+  background-color: var(--color-project-bg);
   height: 20vw;
-  filter: brightness(70%);
+  filter: var(--color-project-hover);
   transition: all 1s ease;
   display: flex;
   align-items: left;
-  padding: 40px;
+  padding: 20px;
   text-align: left;
   flex-direction: column;
   justify-content: flex-end;
@@ -175,11 +222,11 @@ footer {
 }
 
 .projectindividual:hover {
-  filter: brightness(100%);
+  filter: var(--color-project-hover-active);
 }
 
 .light {
-  background: rgb(190, 190, 190);
+  background: var(--color-light-bg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.6;
@@ -220,15 +267,14 @@ footer p {
   display: block;
 }
 
-
 .icon-footer {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
   font-size: 30px;
 }
 
 .icon-footer i:hover {
-  background: -webkit-linear-gradient(#e1eec3, #f05053);
+  background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -236,7 +282,6 @@ footer p {
 .word {
   display: inline-block;
   white-space: nowrap;
-  /* Prevent words from breaking */
 }
 
 .letter {
@@ -259,18 +304,22 @@ footer p {
   padding-right: 10px;
   width: fit-content;
   text-align: center;
+  cursor: pointer;
 }
 
 .icon-label.design {
-  background-color: rgb(120, 176, 196);
+  background-color: var(--color-design-bg);
+  box-shadow: -1px 5px 10px 0px rgba(var(--color-design-bg), 0.538);
 }
 
 .icon-label.web {
-  background-color: rgb(231, 119, 119);
+  background-color: var(--color-web-bg);
+  box-shadow: -1px 5px 10px 0px rgba(var(--color-web-bg), 0.538);
 }
 
 .icon-label.coding {
-  background-color: rgb(130, 196, 120);
+  background-color: var(--color-coding-bg);
+  box-shadow: -1px 5px 10px 0px rgba(var(--color-coding-bg), 0.538);
 }
 
 .icon-contianer {
@@ -284,8 +333,12 @@ footer p {
   justify-content: center;
 }
 
+#theme-icon {
+  cursor: pointer;
+}
+
 .explore-text {
-  color: black
+  color: var(--color-light-text);
 }
 
 .fade-in {
@@ -315,7 +368,7 @@ footer p {
 
 .arrow-1:before {
   content: "";
-  background: -webkit-linear-gradient(#e1eec3, #f05053);
+  background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
   width: 15px;
   clip-path: polygon(0 10px, calc(100% - 15px) 10px, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, calc(100% - 15px) calc(100% - 10px), 0 calc(100% - 10px));
   animation: a1 1.5s infinite linear;
@@ -328,3 +381,31 @@ footer p {
     flex-grow: 1
   }
 } */
+/* 
+
+.bodyslim-preview {
+  background-image: url(../assets/body-slim2.webp);
+  background-size: cover;
+} */
+/* .freezmix-preview {
+  background-image: url(../assets/freez-test.webp);
+  background-size: cover;
+} */
+
+@media screen and (max-width: 450px) {
+  body {
+    background-color: red;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .projects-slide {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 15vw;
+  }
+}

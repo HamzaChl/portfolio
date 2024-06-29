@@ -1,55 +1,26 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 <main>
+  <div class="background-text fadeIn">
+    <span class="fadeIn">Portfolio</span>
+  </div>
   <div class="content">
-    <!-- <h1 class="animate-h1 head-text">a <span class="">student</span> with a passion for web development, I'm training to become a ↬ <span>full-stack developer</span>.</h1> -->
     <h1 class="head-text">Passionate about <span class="">web</span> development, I'm training to become a ↬ <span>full-stack developer</span>.</h1>
-    <p class="header-p fade-in">Check my latest  <a href="/projects"><span class="special-word">projects</span></a></p>
+    <p class="header-p fade-in">Check my latest <a href="/projects"><span class="special-word">projects</span></a></p>
     <section class="projects-slide">
-      <article class="projectindividual bodyslim-preview fade-in">
-        
-        <p >Bodyslim Centre<br><span class="light">2024</span></p>
-        <div class="icon-contianer">
-          <div class="icon-label web">webdev</div>
-          <div class="icon-label design">design</div>
-        </div>
-      </article>
-      <article class="projectindividual fade-in double">
-        <p>Magic The Gathering (School project)<br><span class="light">2024</span></p>
-        <div class="icon-contianer">
-          <div class="icon-label coding">full-stack </div>
-          <div class="icon-label web">webdev</div>
-          <div class="icon-label design">design</div>
-        </div>
-      </article>
-      <article class="projectindividual fade-in">
-        <p>Chandelle Botanique<br><span class="light">2024</span></p>
-        <div class="icon-contianer">
-          <div class="icon-label web">webdev</div>
-          <div class="icon-label design">design</div>
-        </div>
-      </article>
-      <article class="projectindividual fade-in double">
-        <p>MileStone (School project)<br><span class="light">2024</span></p> 
-        <div class="icon-contianer">
-          <div class="icon-label coding">full-stack</div>
-          <div class="icon-label web">webdev</div>
-          <div class="icon-label design">design</div>
-        </div>
-      </article>
-      <article class="projectindividual freezmix-preview fade-in">
-        <p>FreezMix Maroc<br><span class="light">2024</span></p>
-        <div class="icon-contianer">
-          <div class="icon-label web">webdev</div>
-          <div class="icon-label design">design</div>
-        </div>
-      </article>
+      <% projects.slice(0, 3).forEach(function(project) { %>
+        <a href="/project<%= project.href %>">
+          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in">
+            <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
+            <div class="icon-container">
+              <% project.type.forEach(function(type) { %>
+                <div class="icon-label <%= type %>"><%= type %></div>
+              <% }); %>
+            </div>
+          </article>
+        </a>
+      <% }); %>
       <article class="projectindividual fade-in explore">
-        <!-- <p>Bloom-Bar Brussels<br><span class="light">2023</span></p>
-        <div class="icon-contianer">
-          <div class="icon-label web">webdev</div>
-          <div class="icon-label design">design</div>
-        </div> -->
         <a href="/projects" class="nav-item explore-text">Explore more </a>
       </article>
     </section>
@@ -62,4 +33,3 @@
 </main>
 <%- include('partials/footer') %>
 <%- include('partials/foot') %>
-

@@ -1,83 +1,34 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
+<div class="background-text">
+  <span>Projects</span>
+</div>
 <main>
     <h1 class="animate-h1 fade-in">all My work</h1>
     <p class="header-p fade-in">Check all my <span class="special-word">projects</span></p>
+    
     <section class="container-projects">
-        <article class="projectindividual fade-in">
-        
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
 
-
+        <% projects.forEach(function(project) { %>
+          <a href="/project<%= project.href %>">
           <article class="projectindividual fade-in">
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
+              <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
+              <div class="icon-container">
+                <% project.type.forEach(function(type) { %>
+                  <div class="icon-label <%= type %>"><%= type %></div>
+                  <% }); %>
+                </div>
+              </article>
+            </a>
+        <% }); %>
 
-
-          <article class="projectindividual fade-in">
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
-
-
-          <article class="projectindividual fade-in">
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
-
-
-          <article class="projectindividual fade-in">
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
-
-
-          <article class="projectindividual fade-in">
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
-
-
-          <article class="projectindividual fade-in">
-            <p >Project holder<br><span class="light">2024</span></p>
-            <div class="icon-contianer">
-              <div class="icon-label coding">full-stack </div>
-            <div class="icon-label web">webdev</div>
-              <div class="icon-label design">design</div>
-            </div>
-          </article>
     </section>
 
     <section class="contact fade-in">
+
       <h1>Contact</h1>
       <p class="header-p"><span class="special-word">Contact me </span>  <br>I am looking forward to new challenges and <br> opportunities that will allow me to combine <br> my design sensibility with my developing skills.</p>
+
     </section>
 </main>
 

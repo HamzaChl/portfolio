@@ -1,0 +1,13 @@
+<figure class="margin">
+                    <% if (project.images && project.images.length > 0 && project.images[0]) { %>
+                        <img class="preview-img" src="<%= project.images[0] %>" alt="<%= project.name %> Preview" />
+                    <% } else { %>
+                        <img src="/default-image.jpg" alt="<%= project.name %> Preview" /> <!-- Remplacez par l'image par défaut si nécessaire -->
+                    <% } %>
+                    <figcaption><%= project.name %></figcaption>
+</figure>
+
+
+<a href="/contact" class="nav-item <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+
+<button class="contact-btn" onclick="location.href='/contact'">Contact</button>

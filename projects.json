@@ -1,0 +1,169 @@
+{
+    "projects": 
+    [
+        {
+            "id": "PROJECT01",
+            "name": "MileStone",
+            "href": "/milestone",
+            "type":[
+                "webdev",
+                "design",
+                "full-stack"
+            ],
+            "year": 2024,
+            "description": "This project is a web application built with Express.js, EJS (Embedded JavaScript), TypeScript, and MongoDB. It enables users to view and manage football-related data.",
+            "images": [
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/milestone-image1.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/milestone-image2.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/milestone-image3.png"
+            ],
+            "technologies": [
+                "Express.js",
+                "EJS",
+                "TypeScript",
+                "MongoDB",
+                "Node.js"
+            ],
+            "link": "https://github.com/HamzaChl/milestone",
+            "status": "Completed",
+            "features": [
+                "User authentication",
+                "Data visualization",
+                "Responsive design"
+            ],
+            "type-preview": "double",
+            "image-preview": "https://example.com/image2.png"
+        },
+        {
+            "id": "PROJECT02",
+            "name": "Magic The Gathering",
+            "href": "/magicthegathering",
+            "type":[
+                "webdev",
+                "design",
+                "full-stack"
+            ],
+            "year": 2024,
+            "description": "This project is an Express/Node.js application that uses MongoDB as the database. The application enables users to select projects and manage decks of cards, with each user having their own decks. The cards are fetched via the Magic: The Gathering API.",
+            "images": [
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/magicthegathering1.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/magicthegathering2.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/magicthegathering3.png"
+            ],
+            "technologies": [
+                "Express.js",
+                "EJS",
+                "TypeScript",
+                "MongoDB",
+                "Node.js"
+            ],
+            "link": "https://github.com/HamzaChl/manamasters-WPL",
+            "status": "Completed",
+            "features": [
+                "User authentication",
+                "Data visualization",
+                "Cards via API",
+                "Responsive design",
+                "Data storage"
+            ],
+            "type-preview": "double",
+            "image-preview": "https://example.com/image2.png"
+        },
+        {
+            "id": "PROJECT03",
+            "name": "Chandelle Botanique",
+            "href": "/chandellebotanique",
+            "type":[
+                "webdev",
+                "design"
+            ],
+            "year": 2024,
+            "description": "This is a project.",
+            "images": [
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/chandellebotanique1.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/chandellebotanique2.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/chandellebotanique3.png"
+                
+            ],
+            "technologies": [
+                "Wordpress",
+                "WooCommerce",
+                "Illustrator",
+                "Photoshop"
+            ],
+            "link": "https://chandelle-botanique.com/",
+            "status": "Work in Progress",
+            "features": [
+                "E-Commerce website",
+                "Responsive design",
+                "Payement via Stripe"
+            ],
+            "type-preview": "single",
+            "image-preview": "https://example.com/image2.png"
+        },
+        {
+            "id": "PROJECT04",
+            "name": "FreezMix Maroc®",
+            "href": "/freezmix",
+            "type":[
+                "webdev",
+                "design"
+            ],
+            "year": 2024,
+            "description": "This is a project.",
+            "images": [
+                "https://example.com/image.png",
+                "https://example.com/image.png",
+                "https://example.com/image.png"
+            ],
+            "technologies": [
+                "Wordpress",
+                "WooCommerce",
+                "Illustrator",
+                "Photoshop"
+            ],
+            "link": "https://freezmix.ma/",
+            "status": "Work in Progress",
+            "features": [
+                "",
+                ""
+            ],
+            "type-preview": "single",
+            "image-preview": "https://example.com/image.png"
+        },
+        {
+            "id": "PROJECT05",
+            "name": "BodySlim Centre©",
+            "href": "/bodyslim",
+            "type":[
+                "webdev",
+                "design"
+            ],
+            "year": 2024,
+            "description": "This is a project.",
+            "images": [
+                "https://example.com/image.png",
+                "https://example.com/image.png",
+                "https://example.com/image.png"
+            ],
+            "technologies": [
+                "Wordpress",
+                "WooCommerce",
+                "Illustrator",
+                "Photoshop"
+            ],
+            "link": "https://freezmix.ma/",
+            "status": "Work in Progress",
+            "features": [
+                "",
+                ""
+            ],
+            "type-preview": "single",
+            "image-preview": "https://example.com/image.png"
+        }
+
+
+
+
+    ]
+}

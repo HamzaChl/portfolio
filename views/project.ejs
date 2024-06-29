@@ -1,0 +1,58 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<div class="background-text">
+    <span><%= title %></span>
+</div>
+
+<main>
+    <article class="project-article margin">
+        <a href="/projects" class="nav-item project-a"><i class="fa-solid fa-arrow-left-long"></i> Go back to projects</a>
+        <% projects.forEach(function(project) { %>
+            <% if (project.href === currentPage) { %>
+                <h1><%= project.name %></h1>
+                <div class="project-details">
+                    <p><%= project.description %></p>
+                    <p>Year: <%= project.year %></p>
+                    <p>Status: <%= project.status %></p>
+                    <p>Technologies: <%= project.technologies.join(', ') %></p>
+                    <div class="technolgies-container">
+                        <% project.technologies.forEach(function(technologie) { %>
+                            <% if (technologie) { %>
+                                <p class="technolgies"><%= technologie %></p>
+                            <% } %>
+                        <% }); %>
+                    </div>
+                    <p>Features:</p>
+                    <ul>
+                        <% project.features.forEach(function(feature) { %>
+                            <% if (feature) { %>
+                                <li><%= feature %></li>
+                            <% } %>
+                        <% }); %>
+                    </ul>
+                    <% if (project.link) { %>
+                        <p><a href="<%= project.link %>" target="_blank" class="nav-item special-word project-link"><i class="fa-solid fa-link"></i> Link to Project</a></p>
+                    <% } %>
+                </div>
+                <div class="image-container">
+                    <% if (project.images && project.images.length > 0) { %>
+                        <% project.images.forEach(function(image) { %>
+                            <% if (image) { %>
+                                <figure class="margin">
+                                    <img class="preview-img" src="<%= image %>" alt="<%= project.name %> Preview" />
+                                </figure>
+                            <% } %>
+                        <% }); %>
+                    <% } else { %>
+                        <figure class="margin">
+                            <img src="/default-image.jpg" alt="<%= project.name %> Preview" /> <!-- Remplacez par l'image par défaut si nécessaire -->
+                        </figure>
+                    <% } %>
+                </div>
+            <% } %>
+        <% }); %>
+    </article>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/foot') %>

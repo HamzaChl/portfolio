@@ -369,6 +369,15 @@ footer p {
   border: .5px solid var(--color-project-bg);
   padding: 40px;
   border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .preview-img {

@@ -112,9 +112,10 @@
             "year": 2024,
             "description": "This is a project.",
             "images": [
-                "https://example.com/image.png",
-                "https://example.com/image.png",
-                "https://example.com/image.png"
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/freezmix3.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/freezmix1.png",
+                "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/freezmix2.png"
+                
             ],
             "technologies": [
                 "Wordpress",
@@ -148,7 +149,6 @@
             ],
             "technologies": [
                 "Wordpress",
-                "WooCommerce",
                 "Illustrator",
                 "Photoshop"
             ],

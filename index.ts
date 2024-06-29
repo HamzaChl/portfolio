@@ -17,6 +17,14 @@ app.set("port", process.env.PORT ?? 3000);
 
 app.use("/", webRouter());
 
+app.use((req, res, next) => {
+    res.status(404).render("404", { 
+        message: "Oups, your lost?",
+        title: "Oups your lost",
+        currentPage: "error",
+    });
+});
+
 
 app.listen(app.get("port"), () => {
     console.log("Server started on http://localhost:" + app.get("port"));

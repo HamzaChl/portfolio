@@ -47,6 +47,7 @@ export default function webRouter() {
             projects: projectsData,
         })
     });
+    
 
     projectsData.forEach(project => {
         router.get(`/project${project.href}`, (req, res) => {

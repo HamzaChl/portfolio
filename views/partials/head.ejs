@@ -14,57 +14,55 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
     <script>
         const lenis = new Lenis();
-   lenis.on("scroll", () => {});
+        lenis.on("scroll", () => {});
 
-   function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-   }
-   requestAnimationFrame(raf);
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
 
-   function scrollBehaviorChange() {
-    document.documentElement.style.scrollBehavior = "smooth";
-    setTimeout(() => {
-     document.documentElement.style.scrollBehavior = "auto";
-    }, 200);
-   }
+        function scrollBehaviorChange() {
+            document.documentElement.style.scrollBehavior = "smooth";
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = "auto";
+            }, 200);
+        }
     </script>
     
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const h1 = document.querySelector('h1');
-        if (h1) {
-            let text = h1.textContent; // Utiliser textContent pour capturer le texte brut sans balises HTML
-            let words = text.split(' ');
-            let spanContent = '';
-            
-            words.forEach((word, wordIndex) => {
-                if (word) {
-                    let wordSpan = '<span class="word">';
-                    
-                    // Vérifier si le mot est "student" ou "FULL-STACK DEVELOPER" pour ajouter la classe span
-                    if (word.toLowerCase() === 'student' || word.toLowerCase() === 'full-stack') {
-                        for (let i = 0; i < word.length; i++) {
-                            let letter = word[i];
-                            wordSpan += `<span class="letter span special-word" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+        document.addEventListener('DOMContentLoaded', function () {
+            const h1 = document.querySelector('h1');
+            if (h1) {
+                let text = h1.textContent; // Utiliser textContent pour capturer le texte brut sans balises HTML
+                let words = text.split(' ');
+                let spanContent = '';
+                
+                words.forEach((word, wordIndex) => {
+                    if (word) {
+                        let wordSpan = '<span class="word">';
+                        
+                        // Vérifier si le mot est "student" ou "full-stack" pour ajouter la classe special-word à chaque lettre
+                        if (word.toLowerCase() === 'web' || word.toLowerCase() === 'full-stack') {
+                            for (let i = 0; i < word.length; i++) {
+                                let letter = word[i];
+                                wordSpan += `<span class="letter special-word" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+                            }
+                        } else {
+                            for (let i = 0; i < word.length; i++) {
+                                let letter = word[i];
+                                wordSpan += `<span class="letter" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+                            }
                         }
-                    } else {
-                        for (let i = 0; i < word.length; i++) {
-                            let letter = word[i];
-                            wordSpan += `<span class="letter" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
-                        }
+                        
+                        wordSpan += '</span> '; // Ajouter un espace après chaque mot
+                        spanContent += wordSpan;
                     }
-                    
-                    wordSpan += '</span> '; // Ajouter un espace après chaque mot
-                    spanContent += wordSpan;
-                }
-            });
-    
-            h1.innerHTML = spanContent.trim(); // Mettre à jour le contenu de h1 avec le nouveau contenu
-        }
-    });
+                });
+        
+                h1.innerHTML = spanContent.trim(); // Mettre à jour le contenu de h1 avec le nouveau contenu
+            }
+        });
     </script>
-    
-
 </head>
 <body>

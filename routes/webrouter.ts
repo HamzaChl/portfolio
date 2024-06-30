@@ -10,7 +10,7 @@ const pages = ["home", "projects", "easter", "contact"];
 export default function webRouter() {
     const router = express.Router();
 
-    const projectsDataPath = path.join(__dirname, "../projects.json");
+    const projectsDataPath = path.join(__dirname, "../projectsfr.json");
     const projectsData = JSON.parse(fs.readFileSync(projectsDataPath, "utf-8")).projects as Project[];
 
 

@@ -1,17 +1,16 @@
 {
-    "projects": 
-    [
+    "projects": [
         {
             "id": "PROJECT01",
             "name": "MileStone",
             "href": "/milestone",
-            "type":[
+            "type": [
                 "webdev",
                 "design",
                 "full-stack"
             ],
             "year": 2024,
-            "description": "This project is a web application built with Express.js, EJS (Embedded JavaScript), TypeScript, and MongoDB. It enables users to view and manage football-related data.",
+            "description": "Ce projet est une application web construite avec Express.js, EJS (Embedded JavaScript), TypeScript et MongoDB. Il permet aux utilisateurs de visualiser et de gérer des données liées au football.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/milestone-image1.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/milestone-image2.png",
@@ -25,11 +24,11 @@
                 "Node.js"
             ],
             "link": "https://github.com/HamzaChl/milestone",
-            "status": "Completed",
+            "status": "Terminé",
             "features": [
-                "User authentication",
-                "Data visualization",
-                "Responsive design"
+                "Authentification des utilisateurs",
+                "Visualisation des données",
+                "Design responsive"
             ],
             "type-preview": "double",
             "image-preview": "https://example.com/image2.png"
@@ -38,13 +37,13 @@
             "id": "PROJECT02",
             "name": "Magic The Gathering",
             "href": "/magicthegathering",
-            "type":[
+            "type": [
                 "webdev",
                 "design",
                 "full-stack"
             ],
             "year": 2024,
-            "description": "This project is an Express/Node.js application that uses MongoDB as the database. The application enables users to select projects and manage decks of cards, with each user having their own decks. The cards are fetched via the Magic: The Gathering API.",
+            "description": "Ce projet est une application Express/Node.js utilisant MongoDB comme base de données. L'application permet aux utilisateurs de sélectionner des projets et de gérer des decks de cartes, chaque utilisateur ayant ses propres decks. Les cartes sont récupérées via l'API Magic: The Gathering.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/magicthegathering1.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/magicthegathering2.png",
@@ -58,13 +57,13 @@
                 "Node.js"
             ],
             "link": "https://github.com/HamzaChl/manamasters-WPL",
-            "status": "Completed",
+            "status": "Terminé",
             "features": [
-                "User authentication",
-                "Data visualization",
-                "Cards via API",
-                "Responsive design",
-                "Data storage"
+                "Authentification des utilisateurs",
+                "Visualisation des données",
+                "Cartes via API",
+                "Design responsive",
+                "Stockage des données"
             ],
             "type-preview": "double",
             "image-preview": "https://example.com/image2.png",
@@ -77,17 +76,16 @@
             "id": "PROJECT03",
             "name": "Chandelle Botanique",
             "href": "/chandellebotanique",
-            "type":[
+            "type": [
                 "webdev",
                 "design"
             ],
             "year": 2024,
-            "description": "This is a project.",
+            "description": "Ceci est un projet.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/chandellebotanique1.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/chandellebotanique2.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/chandellebotanique3.png"
-                
             ],
             "technologies": [
                 "Wordpress",
@@ -96,11 +94,11 @@
                 "Photoshop"
             ],
             "link": "https://chandelle-botanique.com/",
-            "status": "Work in Progress",
+            "status": "En cours",
             "features": [
-                "E-Commerce website",
-                "Responsive design",
-                "Payement via Stripe"
+                "Site web e-commerce",
+                "Design responsive",
+                "Paiement via Stripe"
             ],
             "type-preview": "single",
             "image-preview": "https://example.com/image2.png"
@@ -109,17 +107,16 @@
             "id": "PROJECT04",
             "name": "FreezMix Maroc®",
             "href": "/freezmix",
-            "type":[
+            "type": [
                 "webdev",
                 "design"
             ],
             "year": 2024,
-            "description": "This is a project.",
+            "description": "Ceci est un projet.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/freezmix3.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/freezmix1.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/freezmix2.png"
-                
             ],
             "technologies": [
                 "Wordpress",
@@ -128,7 +125,7 @@
                 "Photoshop"
             ],
             "link": "https://freezmix.ma/",
-            "status": "Work in Progress",
+            "status": "En cours",
             "features": [
                 "",
                 ""
@@ -140,12 +137,12 @@
             "id": "PROJECT05",
             "name": "BodySlim Centre©",
             "href": "/bodyslim",
-            "type":[
+            "type": [
                 "webdev",
                 "design"
             ],
             "year": 2024,
-            "description": "The aim of the BodySlim project was to design and develop a showcase website for a sports coach who had recently opened a gym in Brussels. The site had to reflect the coach's passion and professionalism, while attracting new customers and providing essential information on the services offered.",
+            "description": "L'objectif du projet BodySlim était de concevoir et de développer un site vitrine pour un coach sportif qui venait d'ouvrir une salle de sport à Bruxelles. Le site devait refléter la passion et le professionnalisme du coach, tout en attirant de nouveaux clients et en fournissant des informations essentielles sur les services proposés.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/bodyslim1.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/bodyslim2.png",
@@ -157,7 +154,7 @@
                 "Photoshop"
             ],
             "link": "https://bodyslim-centre.be/",
-            "status": "Completed",
+            "status": "Terminé",
             "features": [
                 "",
                 ""
@@ -169,12 +166,12 @@
             "id": "PROJECT06",
             "name": "Event Gather©",
             "href": "/eventgather",
-            "type":[
+            "type": [
                 "webdev",
                 "design"
             ],
             "year": 2023,
-            "description": "This is a project.",
+            "description": "Ceci est un projet.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/eventgather0-min.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/eventgather1-min.png",
@@ -188,7 +185,7 @@
                 "WooCommerce"
             ],
             "link": "https://eventgather.de/",
-            "status": "Work in Progress",
+            "status": "En cours",
             "features": [
                 "",
                 ""
@@ -200,14 +197,13 @@
             "id": "PROJECT07",
             "name": "Bloom Bar",
             "href": "/bloombar",
-            "type":[
+            "type": [
                 "design"
             ],
             "year": 2023,
-            "description": "The aim of the BloomBar project was to design a series of attractive, modern flyers to promote the bar on social networks. The flyers were to reflect BloomBar's unique ambience, attract a varied clientele and boost the bar's online presence.",
+            "description": "L'objectif du projet BloomBar était de concevoir une série de flyers attrayants et modernes pour promouvoir le bar sur les réseaux sociaux. Les flyers devaient refléter l'ambiance unique de BloomBar, attirer une clientèle variée et accroître la présence en ligne du bar.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/bloombar1.png"
-                
             ],
             "technologies": [
                 "Illustrator",
@@ -215,7 +211,7 @@
                 "InDesign"
             ],
             "link": "",
-            "status": "Completed",
+            "status": "Terminé",
             "features": [
                 "",
                 ""
@@ -227,17 +223,16 @@
             "id": "PROJECT08",
             "name": "Contempo",
             "href": "/contempo",
-            "type":[
+            "type": [
                 "webdev",
                 "design"
             ],
             "year": 2022,
-            "description": "As part of our training in HTML, CSS and JavaScript, we were asked to create a website. I chose to develop a fictitious project called Contempo, a responsive e-commerce site dedicated to clothing sales. Contempo stands out for its modern, uncluttered design, highlighting the products and offering a fluid user experience on all devices, be they smartphones, tablets or desktops.",
+            "description": "Dans le cadre de notre formation en HTML, CSS et JavaScript, nous avons été invités à créer un site web. J'ai choisi de développer un projet fictif nommé Contempo, un site e-commerce responsive dédié à la vente de vêtements. Contempo se distingue par son design moderne et épuré, mettant en valeur les produits et offrant une expérience utilisateur fluide sur tous les appareils, qu'il s'agisse de smartphones, de tablettes ou d'ordinateurs de bureau.",
             "images": [
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/contempo1.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/contempo2.png",
                 "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/contempo3.png"
-                
             ],
             "technologies": [
                 "HTML",
@@ -245,17 +240,14 @@
                 "JavaScript"
             ],
             "link": "https://github.com/HamzaChl/contempo",
-            "status": "Completed",
+            "status": "Terminé",
             "features": [
-                "Dynamic Product Catalog",
-                "Interactive Shopping Cart",
+                "Catalogue de Produits Dynamique",
+                "Panier d'Achat Interactif",
                 "Formulaire de Contact et Newsletter"
             ],
             "type-preview": "single",
             "image-preview": "https://example.com/image.png"
         }
-
-
-
     ]
 }

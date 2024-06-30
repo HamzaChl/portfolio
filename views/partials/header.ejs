@@ -1,11 +1,11 @@
 <header class="fade-in">
-    <p class="header-p">Hamza's <span class="special-word">Portfolio</span></p>
-    <nav>
-      <a href="/" class="nav-item <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
-      <a href="/projects" class="nav-item <%= currentPage === 'projects' ? 'active' : '' %>">Projects</a>
+  <a href="/"><p class="header-p">Portfolio de <span class="special-word">Hamza</span></p></a>
+  <nav>
+      <a href="/" class="nav-item <%= currentPage === 'home' ? 'active' : '' %>">Accueil</a>
+      <a href="/projects" class="nav-item <%= currentPage === 'projects' ? 'active' : '' %>">Projets</a>
       <a href="/contact" class="nav-item <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
       <i id="theme-icon" class="fa-solid fa-moon fa-xl" onclick="toggleDarkMode()"></i>
-    </nav>
+  </nav>
     <script>
       function toggleDarkMode() {
         document.body.classList.toggle('light-mode');

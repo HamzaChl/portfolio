@@ -1,4 +1,4 @@
-<header class="fade-in">
+<header class="fade-in desktop-nav">
   <a href="/"><p class="header-p">Portfolio de <span class="special-word">Hamza</span></p></a>
   <nav>
       <a href="/" class="nav-item <%= currentPage === 'home' ? 'active' : '' %>">Accueil</a>
@@ -6,33 +6,66 @@
       <a href="/contact" class="nav-item <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
       <i id="theme-icon" class="fa-solid fa-moon fa-xl" onclick="toggleDarkMode()"></i>
   </nav>
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle('light-mode');
-        const isLightMode = document.body.classList.contains('light-mode');
-        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-        updateThemeIcon();
+</header>
+
+<header class="mobile-nav fade-in">
+  <a href="/"><p class="header-p">Portfolio de <span class="special-word">Hamza</span></p></a>
+  <i class="fa-solid fa-bars fa-xl" id="hamburger-icon"></i>
+</header>
+
+<div id="mobile-menu" class="mobile-menu">
+  <div class="mobile-wrapper">
+    <i class="fa-solid fa-moon fa-xl" id="theme-icon-mobile" onclick="toggleDarkMode()"></i>
+    <i class="fa-solid fa-times fa-xl" id="close-icon"></i>
+  </div>
+  <nav class="mobile-menu-nav">
+    <a href="/" class="nav-item <%= currentPage === 'home' ? 'active' : '' %>">Accueil</a>
+    <a href="/projects" class="nav-item <%= currentPage === 'projects' ? 'active' : '' %>">Projets</a>
+    <a href="/contact" class="nav-item <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+  </nav>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('light-mode');
+    const isLightMode = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+    updateThemeIcon();
+  }
+
+  function updateThemeIcon() {
+    const themeIcons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+    themeIcons.forEach(icon => {
+      if (document.body.classList.contains('light-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
       }
-  
-      function updateThemeIcon() {
-        const themeIcon = document.getElementById('theme-icon');
-        if (document.body.classList.contains('light-mode')) {
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
-        } else {
-          themeIcon.classList.remove('fa-sun');
-          themeIcon.classList.add('fa-moon');
-        }
-      }
-  
-      // Initial update on page load
-      document.addEventListener('DOMContentLoaded', function () {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-          document.body.classList.add('light-mode');
-        }
-        updateThemeIcon();
-      });
-    </script>
-  </header>
-  
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-mode');
+    }
+    updateThemeIcon();
+
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburgerIcon.addEventListener('click', function () {
+      mobileMenu.style.display = 'block';
+    });
+
+    closeIcon.addEventListener('click', function () {
+      mobileMenu.style.display = 'none';
+    });
+
+    // Ensure the menu is hidden on load
+    mobileMenu.style.display = 'none';
+  });
+</script>

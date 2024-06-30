@@ -11,3 +11,43 @@
 <a href="/contact" class="nav-item <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
 
 <button class="contact-btn" onclick="location.href='/contact'">Contact</button>
+
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <div class="background-text fadeIn">
+    <span class="fadeIn">Portfolio</span>
+  </div>
+  <div class="content">
+    <h1 class="head-text">Passionate about <span class="">web</span> development, I'm training to become a ↬ <span>full-stack developer</span>.</h1>
+    <p class="header-p fade-in">Check my latest <a href="/projects"><span class="special-word">projects</span></a></p>
+    <section class="projects-slide">
+      <% projects.slice(0, 3).forEach(function(project) { %>
+        <a href="/project<%= project.href %>">
+          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in">
+            <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
+            <div class="icon-container">
+              <% project.type.forEach(function(type) { %>
+                <div class="icon-label <%= type %>"><%= type %></div>
+              <% }); %>
+            </div>
+          </article>
+        </a>
+      <% }); %>
+      <article class="projectindividual fade-in explore">
+        <a href="/projects" class="nav-item explore-text">Explore more </a>
+      </article>
+    </section>
+  </div>
+  <section class="about fade-in">
+    <h1>ABOUT</h1>
+    <p class="header-p"><span class="special-word">Hamza, 23-year-old</span> former design student <br>I am looking forward to new challenges and <br> opportunities that will allow me to combine <br> my design sensibility with my developing skills.</p>
+    <article class="full-screen-project"></article>
+  </section>
+  <section class="about fade-in">
+    <h1>contact</h1>
+    <p class="header-p"><span class="special-word">Contactez-moi </span>  <br>Je suis à la recherche de nouveaux défis et <br> d'opportunités qui me permettront de combiner <br> ma sensibilité au design avec mes compétences en développement.</p>
+</section>
+</main>
+<%- include('partials/footer') %>
+<%- include('partials/foot') %>

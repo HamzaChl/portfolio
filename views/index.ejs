@@ -10,12 +10,14 @@
     <section class="projects-slide">
       <% projects.slice(0, 3).forEach(function(project) { %>
         <a href="/project<%= project.href %>">
-          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in">
-            <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
-            <div class="icon-container">
-              <% project.type.forEach(function(type) { %>
-                <div class="icon-label <%= type %>"><%= type %></div>
-              <% }); %>
+          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in" style="background-image: url('<%= project['image-preview'] ? project['image-preview'] : '' %>');">
+            <div class="content-overlay">
+              <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
+              <div class="icon-container">
+                <% project.type.forEach(function(type) { %>
+                  <div class="icon-label <%= type %>"><%= type %></div>
+                <% }); %>
+              </div>
             </div>
           </article>
         </a>

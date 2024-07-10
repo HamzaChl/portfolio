@@ -6,22 +6,19 @@
 <main>
     <h1 class="animate-h1 fade-in">Tout mon travail</h1>
     <p class="header-p fade-in">Découvrez tous mes <span class="special-word">projets</span></p>
-    
     <section class="container-projects">
-
         <% projects.forEach(function(project) { %>
           <a href="/project<%= project.href %>">
-          <article class="projectindividual fade-in">
+            <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in" style="background-image: url('<%= project['image-preview'] ? project['image-preview'] : '' %>');">
               <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
               <div class="icon-container">
                 <% project.type.forEach(function(type) { %>
                   <div class="icon-label <%= type %>"><%= type %></div>
                   <% }); %>
-                </div>
-              </article>
-            </a>
+              </div>
+          </article>
+          </a>
         <% }); %>
-
     </section>
 
     <section class="contact fade-in">

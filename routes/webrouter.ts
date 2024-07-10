@@ -53,7 +53,7 @@ export default function webRouter() {
         router.get(`/project${project.href}`, (req, res) => {
             res.render("project", {
                 title: project.name,
-                currentPage: project.href, // Utilisation de l'href du projet comme currentPage
+                currentPage: project.href,
                 projects: projectsData,
     
             });

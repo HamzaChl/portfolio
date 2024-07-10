@@ -101,7 +101,7 @@
                 "Paiement via Stripe"
             ],
             "type-preview": "single",
-            "image-preview": "https://example.com/image2.png"
+            "image-preview": "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/ch-botaniquepreview.png"
         },
         {
             "id": "PROJECT04",
@@ -239,7 +239,7 @@
                 "CSS",
                 "JavaScript"
             ],
-            "link": "https://github.com/HamzaChl/contempo",
+            "link": "https://hamzachl.github.io/contempo/",
             "status": "Terminé",
             "features": [
                 "Catalogue de Produits Dynamique",

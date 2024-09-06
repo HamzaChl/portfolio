@@ -9,7 +9,7 @@
     <section class="container-projects">
         <% projects.forEach(function(project) { %>
           <a href="/project<%= project.href %>">
-            <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in" style="background-image: url('<%= project['image-preview'] ? project['image-preview'] : '' %>');">
+            <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in" >
               <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
               <div class="icon-container">
                 <% project.type.forEach(function(type) { %>

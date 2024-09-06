@@ -1,16 +1,21 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
+
 <main>
   <div class="background-text fadeIn">
     <span class="fadeIn">Portfolio</span>
   </div>
   <div class="content">
-    <h1 class="head-text">Passionné par le développement <span>web</span> ,je me forme pour devenir un développeur  ↬ <span>full-stack </span>.</h1>
+    <!-- <h1 class="head-text">Passionné par le développement <span>web</span> ,je me forme pour devenir un développeur  ↬ <span>full-stack </span>.</h1> -->
+    <div class="banner-text">
+      <h1 class="head-text">Designer <br> <span class="alt-head"><span class="special-word">&</span> Developper </span></h1>
+      <!-- <h1 class="head-text alt-head"><span class="special-word">&</span> Developper</h1> -->
+    </div>
     <p class="header-p fade-in">Découvrez mes derniers <a href="/projects"><span class="special-word">projets</span></a></p>
     <section class="projects-slide">
       <% projects.slice(0, 3).forEach(function(project) { %>
         <a href="/project<%= project.href %>">
-          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in" style="background-image: url('<%= project['image-preview'] ? project['image-preview'] : '' %>');">
+          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in">
             <div class="content-overlay">
               <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
               <div class="icon-container">

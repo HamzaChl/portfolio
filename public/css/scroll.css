@@ -10,13 +10,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: -webkit-linear-gradient(#e1eec3, #a54648);
+    background: -webkit-linear-gradient(#283048, #859398);
 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #a54648;
+    background: #4681a5;
 }
 
 

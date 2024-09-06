@@ -41,12 +41,16 @@
                 words.forEach((word, wordIndex) => {
                     if (word) {
                         let wordSpan = '<span class="word">';
-                        
-                        // Vérifier si le mot est "student" ou "full-stack" pour ajouter la classe special-word à chaque lettre
-                        if (word.toLowerCase() === 'web' || word.toLowerCase() === 'full-stack') {
+                        if (word.toLowerCase() === 'web' || word.toLowerCase() === 'developper') {
                             for (let i = 0; i < word.length; i++) {
                                 let letter = word[i];
-                                wordSpan += `<span class="letter special-word" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+                                wordSpan += `<span class="letter alt-head" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
+                            }
+                        }
+                        else if (word.toLowerCase() === '&') {
+                            for (let i = 0; i < word.length; i++) {
+                                let letter = word[i];
+                                wordSpan += `<span class="letter alt-head special-word" style="animation-delay:${(wordIndex + i) * 0.1}s">${letter}</span>`;
                             }
                         } else {
                             for (let i = 0; i < word.length; i++) {
@@ -55,12 +59,12 @@
                             }
                         }
                         
-                        wordSpan += '</span> '; // Ajouter un espace après chaque mot
+                        wordSpan += '</span> ';
                         spanContent += wordSpan;
                     }
                 });
         
-                h1.innerHTML = spanContent.trim(); // Mettre à jour le contenu de h1 avec le nouveau contenu
+                h1.innerHTML = spanContent.trim();
             }
         });
     </script>

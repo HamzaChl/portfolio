@@ -101,7 +101,7 @@
                 "Paiement via Stripe"
             ],
             "type-preview": "single",
-            "image-preview": "https://raw.githubusercontent.com/HamzaChl/portfolio-imagesUrls/main/ch-botaniquepreview.png"
+            "image-preview": ""
         },
         {
             "id": "PROJECT04",

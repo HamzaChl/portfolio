@@ -48,6 +48,13 @@ export default function webRouter() {
         })
     });
     
+    router.get("/2", (req, res) => {
+        res.render("index2", {
+            title: "Hamza's portfolio!",
+            currentPage: "home",
+            projects: projectsData,
+        })
+    });
 
     projectsData.forEach(project => {
         router.get(`/project${project.href}`, (req, res) => {

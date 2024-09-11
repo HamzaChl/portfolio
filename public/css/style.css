@@ -227,8 +227,10 @@ footer {
 }
 
 .banner-text h1 {
-  margin: 0;
+  /* margin-top: 200px; */
   font-size: 11vw;
+  height: 60vh;
+
 }
 
 .banner-text {
@@ -471,7 +473,7 @@ footer p {
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 
 @keyframes fadeInOpacity {
@@ -746,4 +748,35 @@ footer p {
   .mobile-menu {
     display: none !important;
   }
+}
+
+
+/*TEMP
+
+*/
+
+
+.section1 {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+}
+
+.section1 h1 {
+  opacity: 0;
+  transform: translateY(50px);
+  /* Décalage initial */
+  color: rgba(255, 255, 255, 0.1);
+  /* Couleur très claire au début */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, color 1s ease-in-out;
+}
+
+.section1.reveal h1 {
+  opacity: 1;
+  transform: translateY(0);
+  /* Retire le décalage */
+  color: var(--color-text)
+    /* La couleur finale, par exemple le noir */
 }

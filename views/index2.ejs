@@ -1,0 +1,84 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main>
+  <div class="background-text fadeIn">
+    <span class="fadeIn">Portfolio</span>
+  </div>
+  <div class="content">
+    <!-- <h1 class="head-text">Passionné par le développement <span>web</span> ,je me forme pour devenir un développeur  ↬ <span>full-stack </span>.</h1> -->
+    <div class="banner-text">
+      <h1 class="head-text">Designer <br> <span class="alt-head"><span class="special-word">&</span> Developper </span></h1>
+      <!-- <h1 class="head-text alt-head"><span class="special-word">&</span> Developper</h1> -->
+    </div>
+    
+    <section class="section1 fade-in">
+      <h1>Découvrez mes derniers <span class="special-word">projets</span></h1>
+    </section>
+
+    
+    <section class="projects-slide">
+      <% projects.slice(0, 3).forEach(function(project) { %>
+        <a href="/project<%= project.href %>">
+          <article class="projectindividual <%= project['type-preview'] === 'double' ? 'double' : '' %> fade-in">
+            <div class="content-overlay">
+              <p><%= project.name %><br><span class="light"><%= project.year %></span></p>
+              <div class="icon-container">
+                <% project.type.forEach(function(type) { %>
+                  <div class="icon-label <%= type %>"><%= type %></div>
+                <% }); %>
+              </div>
+            </div>
+          </article>
+        </a>
+      <% }); %>
+      <article class="projectindividual fade-in explore">
+        <a href="/projects" class="nav-item explore-text">Explorer davantage </a>
+      </article>
+    </section>
+  </div>
+  <section class="about fade-in">
+    <section class="section1 fade-in">
+      <h1>À PROPOS</h1>
+    </section>
+    <p class="header-p"><span class="special-word">Hamza, 23 ans</span>, ancien étudiant en design <br>Je suis impatient de relever de nouveaux défis et <br> opportunités qui me permettront de combiner <br> ma sensibilité au design avec mes compétences en développement.</p>
+    <article class="full-screen-project"></article>
+  </section>
+  <section class="about fade-in">
+    <h1>Contact</h1>
+    <p class="header-p"><span class="special-word">Contactez-moi </span>  <br>Je suis à la recherche de nouveaux défis et <br> d'opportunités qui me permettront de combiner <br> ma sensibilité au design avec mes compétences en développement.</p>
+</section>
+</main>
+<%- include('partials/footer') %>
+<%- include('partials/foot') %>
+
+
+<script>
+ // Fonction pour détecter si l'élément est visible dans le viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Fonction de callback pour le scroll
+function revealOnScroll() {
+  const sections = document.querySelectorAll('.section1'); // Sélectionne toutes les sections avec la classe .section1
+  sections.forEach(section => {
+    if (isInViewport(section)) {
+      section.classList.add('reveal');
+    }
+  });
+}
+
+// Ajouter un écouteur d'événement pour détecter le scroll
+window.addEventListener('scroll', revealOnScroll);
+
+// Appeler la fonction au chargement de la page pour vérifier les sections déjà visibles
+window.addEventListener('load', revealOnScroll);
+
+</script>
